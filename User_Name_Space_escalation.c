@@ -1,3 +1,12 @@
+/* This is tested on Ubuntu 18.04 LTS and worked for me. Here's an example use:
+#Sample usage:
+user@UbuntuTestBox:$./userPrivX -p -m -U -M '0 1000 1' -G '0 1000 1' bash;
+
+Ultimately, You'll get a root shell from this. I"m currently modifying the source to use different process to spawn with root privileges
+to be used later. We'll see how it goes.
+Shout out to Lucideus for the skeleton/PoC!!!
+*/
+
 #define _GNU_SOURCE
 #include <sched.h>
 #include <unistd.h>
